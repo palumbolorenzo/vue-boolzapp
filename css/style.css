@@ -6,6 +6,7 @@
 
 html {
     background-color: #DADBD4;
+    font-family: sans-serif;
 }
 
 .interface {
@@ -20,7 +21,7 @@ html {
     background-color: #009688;
 }
 
-.center {
+.middle-section {
     display: flex;
 }
 
@@ -34,19 +35,33 @@ html {
 .section-header {
     width: 400px;
     height: 70px;
-    border-right: 1px solid black;
+    border-right: 1px solid #B1B1B1;
     position: relative; 
     top: 70px;
     background-color: #E9EBEB;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .main-header {
     width: 600px;
     height: 70px;
-    border-left: 1px solid rgb(176, 176, 176);
+    border-left: 1px solid #B1B1B1;
     position: relative;
     left: 400px;
     background-color: #E9EBEB;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .main {
@@ -62,10 +77,75 @@ html {
     right: -400px;
     bottom: 70px;
     background-color: #F3EEEA;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.notification {
+    background-color: #8EDAFC;
+    height: 50px;
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.notification-text {
+    margin: 0 1rem;
+}
+
+.link {
+    color: #4F7485;
+    text-decoration: underline;
+}
+
+.search {
+    height: 30px;
+    background-color: rgb(235, 242, 243);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo-light {
+    color: #F2FBFF;
 }
 
 .section {
     height: 670px;
     width: 400px;
     background-color: white;
+}
+
+.logo {
+    color: #B1B1B1;
+}
+
+.logo-dark {
+    color: #6B7376;
+}
+
+.contact-img {
+    border-radius: 50%;
+    width: 50px;
+    margin-right: 1rem;
+}
+
+.contact-list {
+    height: 70px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-header {
+    height: 70px;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+}
+
+.grey {
+    color: #B6B9BB;
 }
