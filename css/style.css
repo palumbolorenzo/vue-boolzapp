@@ -5,49 +5,67 @@
 }
 
 html {
-    width: 1920px;
     background-color: #DADBD4;
+}
+
+.interface {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .header-bg {
     height: 145px;
-    width: 1920px;
+    width: 100%;
     background-color: #009688;
 }
 
-.first-container {
-    width: 1536px;
-    /* position: absolute;
-    z-index: 10; */
+.center {
+    display: flex;
 }
 
-.header {
-    width: 1536px;
-    height: 69px;
-    /* position: fixed;
-    right: 0;
-    top: 0; */
-    background-color: red;
+.first-container {
+    width: 1000px;
+    margin: 22px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-header {
+    width: 400px;
+    height: 70px;
+    border-right: 1px solid black;
+    position: relative; 
+    top: 70px;
+    background-color: #E9EBEB;
+}
+
+.main-header {
+    width: 600px;
+    height: 70px;
+    border-left: 1px solid rgb(176, 176, 176);
+    position: relative;
+    left: 400px;
+    background-color: #E9EBEB;
 }
 
 .main {
-    height: 780px;
-    width: 997px;
-    /* position: fixed;
-    right: 0; */
-    background-color: blue;
+    height: 600px;
+    width: 600px;
+    background-image: url('../img/boolzapp-bg.jpeg');
 }
 
 .footer {
-    height: 67px;
-    width: 1536px;
-    /* position: fixed;
-    bottom: 0;
-    right: 0; */
-    background-color: greenyellow;
+    height: 70px;
+    width: 600px;
+    position: relative; 
+    right: -400px;
+    bottom: 70px;
+    background-color: #F3EEEA;
 }
 
 .section {
-    height: 847px;
-    width: 537px;
+    height: 670px;
+    width: 400px;
+    background-color: white;
 }
