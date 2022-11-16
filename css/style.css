@@ -9,8 +9,45 @@ html {
     background-color: #DADBD4;
 }
 
-.header {
+.header-bg {
     height: 145px;
     width: 1920px;
     background-color: #009688;
+}
+
+.first-container {
+    width: 1536px;
+    /* position: absolute;
+    z-index: 10; */
+}
+
+.header {
+    width: 1536px;
+    height: 69px;
+    /* position: fixed;
+    right: 0;
+    top: 0; */
+    background-color: red;
+}
+
+.main {
+    height: 780px;
+    width: 997px;
+    /* position: fixed;
+    right: 0; */
+    background-color: blue;
+}
+
+.footer {
+    height: 67px;
+    width: 1536px;
+    /* position: fixed;
+    bottom: 0;
+    right: 0; */
+    background-color: greenyellow;
+}
+
+.section {
+    height: 847px;
+    width: 537px;
 }
