@@ -68,6 +68,9 @@ html {
     height: 600px;
     width: 600px;
     background-image: url('../img/boolzapp-bg.jpeg');
+    padding: 2rem;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .footer {
@@ -101,8 +104,9 @@ html {
 }
 
 .search {
-    height: 30px;
+    height: 40px;
     background-color: rgb(235, 242, 243);
+    padding: .5rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -148,4 +152,24 @@ html {
 
 .grey {
     color: #B6B9BB;
+}
+
+.my-message {
+    background-color: #D5F9BA;
+    width: 150px;
+    height: 50px;
+    padding: .7rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.your-message {
+    background-color: rgb(255, 255, 255);
+    width: 150px;
+    height: 50px;
+    padding: .7rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
 }
