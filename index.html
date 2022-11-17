@@ -62,15 +62,20 @@
                                 <div v-for="contact in contacts" :key="contact.avatar" class="contact">
                                     <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="" class="contact-img">
                                     <div class="contact-data">
-                                        <p>{{ name }}</p>
+                                        <p>{{ contact.name }}</p>
                                         <p class="grey">Ultimo messaggio inviato</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="main">
-                            <div class="my-message">Ciao come stai? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo mollitia animi nobis similique et, reprehenderit temporibus quos nisi, provident laudantium saepe voluptate facere incidunt sequi quia iste eveniet voluptatum at!</div>
-                            <!-- <div class="your-message">lll</div> -->
+                            <div class="right">
+                                <div class="my-message">Ciao come stai? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo mollitia animi nobis similique et, reprehenderit temporibus quos nisi, provident laudantium saepe voluptate facere incidunt sequi quia iste eveniet voluptatum at!</div>
+                            </div> 
+                            <div class="left">
+                                <div class="your-message">Ciao come stai? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo mollitia animi nobis similique et, reprehenderit temporibus quos nisi, provident laudantium saepe voluptate facere incidunt sequi quia iste eveniet voluptatum at!</div>
+                                <!-- <div class="your-message">lll</div> -->
+                            </div>
                         </div>
                     </div>    
                     <div class="footer">
