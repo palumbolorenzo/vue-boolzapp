@@ -129,6 +129,11 @@ html {
     color: #6B7376;
 }
 
+.logo-dark:hover {
+    transform: scale(1.25);
+    cursor: pointer;
+}
+
 .contact-img {
     border-radius: 50%;
     width: 50px;
