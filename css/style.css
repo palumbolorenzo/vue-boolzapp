@@ -143,6 +143,15 @@ html {
     align-items: center;
 }
 
+.contact:hover {
+    background-color: rgb(241, 241, 241);
+    cursor: pointer;
+}
+
+.section {
+    overflow-x: hidden;
+}
+
 .contact-header {
     height: 70px;
     padding: .5rem;
