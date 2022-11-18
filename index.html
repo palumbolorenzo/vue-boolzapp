@@ -33,9 +33,9 @@
                     </div>
                     <div class="main-header">
                         <div class="contact-header">
-                            <img src="img/avatar_1.jpg" alt="" class="contact-img">
+                            <img :src="'img/avatar' + contacts[activeIndex].avatar + '.jpg'" alt="" class="contact-img">
                             <div class="contact-data-header">
-                                    <p>Michele</p>
+                                    <!-- <p>{{ contact.name }}</p> -->
                                     <p class="grey">Ultimo accesso oggi alle 12:00</p>
                                 </div>
                         </div>
@@ -59,7 +59,7 @@
                                 <input type="text" placeholder="Cerca o inizia una nuova chat" size="50">
                             </div>
                             <div class="contact-list">
-                                <div v-for="contact in contacts" :key="contact.avatar" class="contact">
+                                <div v-for="contact in contacts" :key="contact.avatar" class="contact" @click="setActiveIndex(i)">
                                     <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="" class="contact-img">
                                     <div class="contact-data">
                                         <p>{{ contact.name }}</p>
@@ -70,17 +70,17 @@
                         </div>
                         <div class="main">
                             <div class="right">
-                                <div class="my-message">Ciao come stai? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo mollitia animi nobis similique et, reprehenderit temporibus quos nisi, provident laudantium saepe voluptate facere incidunt sequi quia iste eveniet voluptatum at!</div>
+                                <div v-for="message in contacts[activeIndex].messages" class="message" :class="'message-' + message.status">{{ message.message }}</div>
                             </div> 
-                            <div class="left">
-                                <div class="your-message">Ciao come stai? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo mollitia animi nobis similique et, reprehenderit temporibus quos nisi, provident laudantium saepe voluptate facere incidunt sequi quia iste eveniet voluptatum at!</div>
-                                <!-- <div class="your-message">lll</div> -->
-                            </div>
+                            <!-- <div class="left">
+                                <div class="message-received">Ciao come stai? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo mollitia animi nobis similique et, reprehenderit temporibus quos nisi, provident laudantium saepe voluptate facere incidunt sequi quia iste eveniet voluptatum at!</div>
+                                <div class="your-message">lll</div>
+                            </div> -->
                         </div>
                     </div>    
                     <div class="footer">
                         <i class="fa-regular fa-face-smile logo-dark"></i>
-                        <input type="text" placeholder="Scrivi un messaggio" size="70">
+                        <input type="text" placeholder="Scrivi un messaggio" size="70" v-model="newMessage" @keyup.enter="sendMessage">
                         <i class="fa-solid fa-microphone logo-dark"></i>
                     </div>
                 </div>

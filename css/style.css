@@ -190,25 +190,36 @@ html {
     color: #B6B9BB;
 }
 
-.my-message {
-    background-color: #D5F9BA;
+.message {
     width: fit-content;
     height: fit-content;
     padding: .5rem 1rem;
     border-radius: 20px;
+    /* overflow-wrap: break-word; */
     display: flex;
     justify-content: center;
     flex: 0 0 50%;
 }
 
-.your-message {
-    background-color: #6B7376;
-    color: #E9EBEB;
-    width: fit-content;
+.message-sent {
+    background-color: #D5F9BA;
+    /* width: fit-content;
     height: fit-content;
     padding: .5rem 1rem;
     border-radius: 20px;
     display: flex;
     justify-content: center;
-    flex: 0 0 50%;
+    flex: 0 0 50%; */
+}
+
+.message-received {
+    background-color: #6B7376;
+    color: #E9EBEB;
+    /* width: fit-content;
+    height: fit-content;
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex: 0 0 50%; */
 }
