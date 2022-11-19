@@ -168,6 +168,10 @@ html {
     align-items: center;
 }
 
+/* .contact .dark-mode {
+    background-color: ;
+} */
+
 .contact:hover {
     background-color: rgb(241, 241, 241);
     cursor: pointer;
@@ -191,35 +195,22 @@ html {
 }
 
 .message {
-    width: fit-content;
-    height: fit-content;
-    padding: .5rem 1rem;
-    border-radius: 20px;
-    /* overflow-wrap: break-word; */
-    display: flex;
-    justify-content: center;
-    flex: 0 0 50%;
+	position: relative;
+	flex: 0 1 auto;
+	margin-bottom: .5rem;
+	padding: 1em;
+	min-width: 125px;
+	max-width: 45%;
+	border-radius: .5em;
 }
 
 .message-sent {
+    align-self: flex-end;
     background-color: #D5F9BA;
-    /* width: fit-content;
-    height: fit-content;
-    padding: .5rem 1rem;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    flex: 0 0 50%; */
 }
 
 .message-received {
+    align-self: flex-start;
     background-color: #6B7376;
     color: #E9EBEB;
-    /* width: fit-content;
-    height: fit-content;
-    padding: .5rem 1rem;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    flex: 0 0 50%; */
 }

@@ -26,6 +26,8 @@
                             <p>Sofia</p>
                         </div>
                         <div class="logo-container">
+                            <!-- <i class="fa-solid fa-toggle-off"></i>
+                            <i class="fa-solid fa-toggle-on"></i> -->
                             <i class="fa fa-circle-notch logo"></i>
                             <i class="fa-solid fa-message logo"></i>
                             <i class="fa-solid fa-ellipsis-vertical logo"></i>
@@ -59,7 +61,7 @@
                                 <input type="text" placeholder="Cerca o inizia una nuova chat" size="50">
                             </div>
                             <div class="contact-list">
-                                <div v-for="contact in contacts" :key="contact.avatar" class="contact" @click="setActiveIndex(i)">
+                                <div v-for="(contact, i) in contacts" :key="contact.avatar" class="contact" @click="setActiveIndex(i)">
                                     <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="" class="contact-img">
                                     <div class="contact-data">
                                         <p>{{ contact.name }}</p>
@@ -68,14 +70,17 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="main">
+                        <!-- <div class="main">
                             <div class="right">
                                 <div v-for="message in contacts[activeIndex].messages" class="message" :class="'message-' + message.status">{{ message.message }}</div>
                             </div> 
-                            <!-- <div class="left">
+                            <div class="left">
                                 <div class="message-received">Ciao come stai? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo mollitia animi nobis similique et, reprehenderit temporibus quos nisi, provident laudantium saepe voluptate facere incidunt sequi quia iste eveniet voluptatum at!</div>
                                 <div class="your-message">lll</div>
-                            </div> -->
+                            </div>
+                        </div> -->
+                        <div class="main">
+                            <div v-for="message in contacts[activeIndex].messages" class="message" :class="'message-' + message.status">{{ message.message }}</div>
                         </div>
                     </div>    
                     <div class="footer">
