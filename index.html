@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boolzapp</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- <style>
+    <style>
         [v-cloak] {
             display: none;
         }
-    </style> -->
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js" defer></script>
     <script src="js/script.js" defer></script>
@@ -26,7 +26,7 @@
                             <p>Sofia</p>
                         </div>
                         <div class="logo-container">
-                            <i class="fa-solid fa-moon" @click="dark()"></i>
+                            <i class="fa-solid fa-moon moon" @click="modeToggle()"></i>
                             <i class="fa fa-circle-notch logo"></i>
                             <i class="fa-solid fa-message logo"></i>
                             <i class="fa-solid fa-ellipsis-vertical logo"></i>
@@ -36,7 +36,6 @@
                         <div class="contact-header">
                             <img :src="'img/avatar' + contacts[activeIndex].avatar + '.jpg'" alt="" class="contact-img">
                             <div class="contact-data-header">
-                                    <!-- <p>{{ contact.name }}</p> -->
                                     <p>{{ contacts[activeIndex].name }}</p>
                                     <p class="grey">Ultimo accesso oggi alle 12:00</p>
                                 </div>

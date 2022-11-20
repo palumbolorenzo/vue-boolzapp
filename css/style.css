@@ -130,7 +130,7 @@ html {
 }
 
 .logo-dark:hover {
-    transform: scale(1.25);
+    transform: scale(1.1);
     cursor: pointer;
 }
 
@@ -211,6 +211,11 @@ html {
     color: #E9EBEB;
 }
 
+.moon:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
 /* dark mode */
 
 .section-header.dark-mode {
@@ -220,11 +225,6 @@ html {
 
 .main-header.dark-mode {
     background-color: #232D37;
-    color: #F2FBFF;
-}
-
-.contact.dark-mode {
-    background-color: #111E27;
     color: #F2FBFF;
 }
 

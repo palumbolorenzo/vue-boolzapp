@@ -186,8 +186,14 @@ new Vue({
                 status: 'sent',
             });
             this.newMessage = '';
+            const userReply = this.activeIndex;
+			setTimeout(() => {
+				this.contacts[userReply].messages.push({
+					message: 'Ok!',
+					status: 'received',
+				});
+			}, 2000);
         },
-        
         dark() {
             document.getElementById('dm').classList.add('dark-mode')
             this.darkMode = true
@@ -205,64 +211,6 @@ new Vue({
                 this.dark()
             }
         },
-        /*
-        dark1() {
-            document.getElementById('dm1').classList.add('dark-mode')
-            this.darkMode = true
-            this.$emit('dark')
-        },
-        dark2() {
-            document.getElementById('dm2').classList.add('dark-mode')
-            this.darkMode = true
-            this.$emit('dark')
-        },
-        dark3() {
-            document.getElementById('dm3').classList.add('dark-mode')
-            this.darkMode = true
-            this.$emit('dark')
-        },
-        dark4() {
-            document.getElementById('dm4').classList.add('dark-mode')
-            this.darkMode = true
-            this.$emit('dark')
-        },
-        dark5() {
-            document.getElementById('dm5').classList.add('dark-mode')
-            this.darkMode = true
-            this.$emit('dark')
-        },
-        dark6() {
-            document.getElementById('dm6').classList.add('dark-mode')
-            this.darkMode = true
-            this.$emit('dark')
-        },
-        dark7() {
-            document.getElementById('dm7').classList.add('dark-mode')
-            this.darkMode = true
-            this.$emit('dark')
-        },
-        dark8() {
-            document.getElementById('dm8').classList.add('dark-mode')
-            this.darkMode = true
-            this.$emit('dark')
-        },
-        dark9() {
-            document.getElementById('dm9').classList.add('dark-mode')
-            this.darkMode = true
-            this.$emit('dark')
-        },
-        dark10() {
-            document.getElementById('dm10').classList.add('dark-mode')
-            this.darkMode = true
-            this.$emit('dark')
-        },
-        */
     },
-    
-    computed: {
-        darkDark() {
-            return this.darkMode && 'darkmode-toggled'
-        }
-    }
 });
 
