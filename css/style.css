@@ -168,10 +168,6 @@ html {
     align-items: center;
 }
 
-/* .contact .dark-mode {
-    background-color: ;
-} */
-
 .contact:hover {
     background-color: rgb(241, 241, 241);
     cursor: pointer;
@@ -213,4 +209,26 @@ html {
     align-self: flex-start;
     background-color: #6B7376;
     color: #E9EBEB;
+}
+
+/* dark mode */
+
+.section-header.dark-mode {
+    background-color: #232D37;
+    color: #F2FBFF;
+}
+
+.main-header.dark-mode {
+    background-color: #232D37;
+    color: #F2FBFF;
+}
+
+.contact.dark-mode {
+    background-color: #111E27;
+    color: #F2FBFF;
+}
+
+.contact.dark-mode {
+    background-color: #111E27;
+    color: #F2FBFF;
 }

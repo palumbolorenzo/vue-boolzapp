@@ -5,6 +5,7 @@ new Vue({
         {
             name: 'Michele',
             avatar: '_1',
+            id: 2,
             visible: true,
             messages: [
                 {
@@ -27,6 +28,7 @@ new Vue({
         {
             name: 'Fabio',
             avatar: '_2',
+            id: 3,
             visible: true,
             messages: [
                 {
@@ -49,6 +51,7 @@ new Vue({
         {
             name: 'Samuele',
             avatar: '_3',
+            id: 4,
             visible: true,
             messages: [
                 {
@@ -71,6 +74,7 @@ new Vue({
         {
             name: 'Alessandro B.',
             avatar: '_4',
+            id: 5,
             visible: true,
             messages: [
                 {
@@ -88,6 +92,7 @@ new Vue({
         {
             name: 'Alessandro L.',
             avatar: '_5',
+            id: 6,
             visible: true,
             messages: [
                 {
@@ -105,6 +110,7 @@ new Vue({
         {
             name: 'Claudia',
             avatar: '_6',
+            id: 7,
             visible: true,
             messages: [
                 {
@@ -127,6 +133,7 @@ new Vue({
         {
             name: 'Federico',
             avatar: '_7',
+            id: 8,
             visible: true,
             messages: [
                 {
@@ -144,6 +151,7 @@ new Vue({
         {
             name: 'Davide',
             avatar: '_8',
+            id: 9,
             visible: true,
             messages: [
                 {
@@ -166,8 +174,8 @@ new Vue({
         ],
         activeIndex: 0,
         newMessage: '',
-        darkModeActive: false,
     },
+
     methods: {
         setActiveIndex(index){
             this.activeIndex = index;
@@ -177,12 +185,84 @@ new Vue({
                 message: this.newMessage,
                 status: 'sent',
             });
+            this.newMessage = '';
+        },
+        
+        dark() {
+            document.getElementById('dm').classList.add('dark-mode')
+            this.darkMode = true
+            this.$emit('dark')
+        },
+        light() {
+            document.getElementById('dm').classList.remove('dark-mode')
+            this.darkMode = false
+            this.$emit('light')
+        },
+        modeToggle() {
+            if(this.darkMode || document.getElementById('dm').classList.contains('dark-mode')) {
+                this.light()
+            } else {
+                this.dark()
+            }
         },
         /*
-        darkMode(){
-            this.darkModeActive = true,
-        }
+        dark1() {
+            document.getElementById('dm1').classList.add('dark-mode')
+            this.darkMode = true
+            this.$emit('dark')
+        },
+        dark2() {
+            document.getElementById('dm2').classList.add('dark-mode')
+            this.darkMode = true
+            this.$emit('dark')
+        },
+        dark3() {
+            document.getElementById('dm3').classList.add('dark-mode')
+            this.darkMode = true
+            this.$emit('dark')
+        },
+        dark4() {
+            document.getElementById('dm4').classList.add('dark-mode')
+            this.darkMode = true
+            this.$emit('dark')
+        },
+        dark5() {
+            document.getElementById('dm5').classList.add('dark-mode')
+            this.darkMode = true
+            this.$emit('dark')
+        },
+        dark6() {
+            document.getElementById('dm6').classList.add('dark-mode')
+            this.darkMode = true
+            this.$emit('dark')
+        },
+        dark7() {
+            document.getElementById('dm7').classList.add('dark-mode')
+            this.darkMode = true
+            this.$emit('dark')
+        },
+        dark8() {
+            document.getElementById('dm8').classList.add('dark-mode')
+            this.darkMode = true
+            this.$emit('dark')
+        },
+        dark9() {
+            document.getElementById('dm9').classList.add('dark-mode')
+            this.darkMode = true
+            this.$emit('dark')
+        },
+        dark10() {
+            document.getElementById('dm10').classList.add('dark-mode')
+            this.darkMode = true
+            this.$emit('dark')
+        },
         */
+    },
+    
+    computed: {
+        darkDark() {
+            return this.darkMode && 'darkmode-toggled'
+        }
     }
 });
 

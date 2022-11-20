@@ -20,24 +20,24 @@
         <div id="app" class="" v-cloak>
             <div class="interface">
                 <div class="first-container">
-                    <div class="section-header">
+                    <div class="section-header" id="dm">
                         <div class="contact-header">
                             <img src="img/avatar_io.jpg" alt="" class="contact-img">
                             <p>Sofia</p>
                         </div>
                         <div class="logo-container">
-                            <!-- <i class="fa-solid fa-toggle-off"></i>
-                            <i class="fa-solid fa-toggle-on"></i> -->
+                            <i class="fa-solid fa-moon" @click="dark()"></i>
                             <i class="fa fa-circle-notch logo"></i>
                             <i class="fa-solid fa-message logo"></i>
                             <i class="fa-solid fa-ellipsis-vertical logo"></i>
                         </div>
                     </div>
-                    <div class="main-header">
+                    <div class="main-header" id="dm">
                         <div class="contact-header">
                             <img :src="'img/avatar' + contacts[activeIndex].avatar + '.jpg'" alt="" class="contact-img">
                             <div class="contact-data-header">
                                     <!-- <p>{{ contact.name }}</p> -->
+                                    <p>{{ contacts[activeIndex].name }}</p>
                                     <p class="grey">Ultimo accesso oggi alle 12:00</p>
                                 </div>
                         </div>
@@ -61,12 +61,12 @@
                                 <input type="text" placeholder="Cerca o inizia una nuova chat" size="50">
                             </div>
                             <div class="contact-list">
-                                <div v-for="(contact, i) in contacts" :key="contact.avatar" class="contact" @click="setActiveIndex(i)">
+                                <div v-for="(contact, i) in contacts" :key="contact.avatar" :id="'dm' + contact.id" class="contact" @click="setActiveIndex(i)">
                                     <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="" class="contact-img">
                                     <div class="contact-data">
                                         <p>{{ contact.name }}</p>
                                         <p class="grey">Ultimo messaggio inviato</p>
-                                    </div>
+                                    </div> 
                                 </div>
                             </div>
                         </div>
